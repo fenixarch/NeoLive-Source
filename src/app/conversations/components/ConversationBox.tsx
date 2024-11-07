@@ -17,6 +17,15 @@ interface ConversationBoxProps {
   selected?: boolean;
 }
 
+/**
+ * A React functional component that renders a conversation box.
+ * This component displays information about a conversation, including the last message,
+ * user avatar, and timestamp. It also handles click events to navigate to the full conversation.
+ * @param {Object} props - The component props
+ * @param {Object} props.data - The conversation data object
+ * @param {boolean} props.selected - Indicates if the conversation is currently selected
+ * @returns {JSX.Element} A div element representing the conversation box
+ */
 const ConversationBox: React.FC<ConversationBoxProps> = ({ data, selected }) => {
   const otherUser = useOtherUser(data);
   const session = useSession();

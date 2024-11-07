@@ -20,6 +20,14 @@ interface SettingsModalProps {
   currentUser: User;
 }
 
+/**
+ * A React functional component for rendering a settings modal
+ * @param {Object} props - The component props
+ * @param {boolean} props.isOpen - Determines if the modal is open
+ * @param {Function} props.onClose - Function to call when closing the modal
+ * @param {Object} props.currentUser - The current user object
+ * @returns {JSX.Element} A modal component for user settings
+ */
 const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, currentUser }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);

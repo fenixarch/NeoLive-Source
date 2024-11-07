@@ -6,6 +6,10 @@ import { Channel, Members } from "pusher-js";
 import { pusherClient } from "../libs/pusher";
 import useActiveList from "./useActiveList";
 
+/**
+ * Custom hook for managing active channel and user presence in a real-time messaging application.
+ * @returns {void} This hook doesn't return anything, but it manages the active channel state and user presence.
+ */
 const useActiveChannel = () => {
   const session = useSession();
 

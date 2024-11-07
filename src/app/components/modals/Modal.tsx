@@ -11,6 +11,13 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
+/**
+ * A reusable Modal component for React applications
+ * @param {boolean} isOpen - Determines whether the modal is visible
+ * @param {Function} onClose - Callback function to be called when the modal is closed
+ * @param {React.ReactNode} children - The content to be rendered inside the modal
+ * @returns {JSX.Element} A modal component with customizable content and styling
+ */
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
     <Transition.Root show={isOpen} as={Fragment}>

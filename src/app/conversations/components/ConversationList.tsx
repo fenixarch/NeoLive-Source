@@ -20,6 +20,13 @@ interface ConversationListProps {
   users: User[];
 }
 
+/**
+ * Renders a list of conversations with real-time updates using Pusher
+ * @param {Object} props - The component props
+ * @param {FullConversationType[]} props.initialItems - The initial list of conversations
+ * @param {User[]} props.users - The list of users for creating new group chats
+ * @returns {JSX.Element} A sidebar component displaying the list of conversations and a modal for creating group chats
+ */
 const ConversationList: React.FC<ConversationListProps> = ({ initialItems, users }) => {
   const [items, setItems] = useState(initialItems);
   const [isModalOpen, setIsModalOpen] = useState(false);

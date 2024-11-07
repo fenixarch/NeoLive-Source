@@ -13,6 +13,12 @@ interface UserBoxProps {
   data: User;
 }
 
+/**
+ * React functional component for rendering a user box with click functionality
+ * @param {Object} props - Component props
+ * @param {Object} props.data - User data object containing id and name
+ * @returns {JSX.Element} A div containing user avatar and name, with click handler
+ */
 const UserBox: React.FC<UserBoxProps> = ({ data }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);

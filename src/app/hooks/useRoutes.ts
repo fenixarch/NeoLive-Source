@@ -7,6 +7,15 @@ import { usePathname } from "next/navigation";
 
 import useConversation from "./useConversation";
 
+/**
+ * Returns an array of route objects for navigation.
+ * @returns {Array<Object>} An array of route objects, each containing:
+ *   - label: {string} The display text for the route
+ *   - href: {string} The URL path for the route
+ *   - icon: {Component} The icon component for the route
+ *   - active: {boolean} Whether the route is currently active
+ *   - onClick: {Function} (Optional) Click handler for the route
+ */
 const useRoutes = () => {
   const pathname = usePathname();
   const { conversationId } = useConversation();

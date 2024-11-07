@@ -19,6 +19,12 @@ interface HeaderProps {
   };
 }
 
+/**
+ * React functional component for rendering the header of a conversation
+ * @param {Object} props - The props object
+ * @param {Object} props.conversation - The conversation object containing details about the current chat
+ * @returns {JSX.Element} A React component that displays the conversation header
+ */
 const Header: React.FC<HeaderProps> = ({ conversation }) => {
   const otherUser = useOtherUser(conversation);
   const [drawerOpen, setDrawerOpen] = useState(false);

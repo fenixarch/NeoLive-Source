@@ -21,6 +21,14 @@ interface ProfileDrawerProps {
   };
 }
 
+/**
+ * Renders a chat drawer component for displaying user or group information
+ * @param {Object} props - The component props
+ * @param {boolean} props.isOpen - Determines if the drawer is open
+ * @param {Function} props.onClose - Function to call when closing the drawer
+ * @param {Object} props.data - Data object containing chat information
+ * @returns {JSX.Element} A React component representing the chat drawer
+ */
 const ChatDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) => {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const otherUser = useOtherUser(data);

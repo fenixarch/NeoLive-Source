@@ -10,6 +10,18 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
+/**
+ * A customizable button component for React applications.
+ * @param {Object} props - The properties that define the button's behavior and appearance.
+ * @param {"button" | "submit" | "reset"} [props.type="button"] - The type of the button.
+ * @param {boolean} [props.fullWidth] - Whether the button should take up the full width of its container.
+ * @param {React.ReactNode} props.children - The content to be displayed inside the button.
+ * @param {() => void} [props.onClick] - The function to be called when the button is clicked.
+ * @param {boolean} [props.secondary] - Whether to apply secondary styling to the button.
+ * @param {boolean} [props.danger] - Whether to apply danger styling to the button.
+ * @param {boolean} [props.disabled] - Whether the button should be disabled.
+ * @returns {JSX.Element} A styled button component.
+ */
 const Button: React.FC<ButtonProps> = ({
   type = "button",
   fullWidth,

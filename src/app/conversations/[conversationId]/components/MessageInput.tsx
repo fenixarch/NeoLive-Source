@@ -11,6 +11,16 @@ interface MessageInputProps {
   errors: FieldErrors;
 }
 
+/**
+ * Renders an input field component for messages.
+ * @param {Object} props - The component props.
+ * @param {string} props.placeholder - The placeholder text for the input field.
+ * @param {string} props.id - The ID for the input field.
+ * @param {string} props.type - The type of the input field.
+ * @param {boolean} props.required - Whether the input field is required.
+ * @param {Function} props.register - The register function from react-hook-form.
+ * @returns {JSX.Element} A div containing an input element with specified properties and styling.
+ */
 const MessageInput: React.FC<MessageInputProps> = ({
   placeholder,
   id,

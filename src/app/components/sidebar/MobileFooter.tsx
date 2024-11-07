@@ -13,6 +13,12 @@ interface MobileFooterProps {
   currentUser: User;
 }
 
+/**
+ * Renders a mobile footer component for navigation and user interaction.
+ * @param {Object} props - The component props.
+ * @param {Object} props.currentUser - The current user object.
+ * @returns {React.ReactElement|null} The rendered footer component or null if a conversation is open.
+ */
 const MobileFooter: React.FC<MobileFooterProps> = ({ currentUser }) => {
   const routes = useRoutes();
   const { isOpen } = useConversation();

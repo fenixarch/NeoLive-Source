@@ -10,6 +10,16 @@ interface DesktopItemProps {
   active?: boolean;
 }
 
+/**
+ * Renders a desktop item as a list item with a link and an icon.
+ * @param {Object} props - The component props.
+ * @param {string} props.label - The label for the desktop item (used for accessibility).
+ * @param {string} props.href - The URL for the link.
+ * @param {React.ComponentType} props.icon - The icon component to be rendered.
+ * @param {boolean} [props.active] - Whether the item is currently active.
+ * @param {Function} [props.onClick] - Optional click handler for the item.
+ * @returns {React.ReactElement} A list item containing a styled link with an icon.
+ */
 const DesktopItem: React.FC<DesktopItemProps> = ({ label, href, icon: Icon, active, onClick }) => {
   const handleClick = () => {
     if (onClick) {

@@ -9,6 +9,10 @@ import { CldUploadButton } from "next-cloudinary";
 import useConversation from "../../../hooks/useConversation";
 import MessageInput from "./MessageInput";
 
+/**
+ * Renders a form component for sending messages in a conversation.
+ * @returns {JSX.Element} A div containing a file upload button and a form for submitting messages.
+ */
 const Form = () => {
   const { conversationId } = useConversation();
 

@@ -16,6 +16,13 @@ interface MessageBoxProps {
   isLast?: boolean;
 }
 
+/**
+ * Renders a message box component in a chat interface.
+ * @param {MessageBoxProps} props - The props for the MessageBox component.
+ * @param {Object} props.data - The message data object.
+ * @param {boolean} props.isLast - Indicates if this is the last message in the list.
+ * @returns {JSX.Element} A React component representing a message box.
+ */
 const MessageBox: React.FC<MessageBoxProps> = ({ data, isLast }) => {
   const session = useSession();
   const [imageModalOpen, setImageModalOpen] = useState(false);

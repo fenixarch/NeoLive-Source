@@ -49,6 +49,20 @@ export interface Props extends SVGProps {
   sunColor?: string;
 }
 
+/**
+ * A React functional component that renders a dark mode switch button.
+ * The switch toggles between sun and moon icons to represent light and dark modes.
+ * @param {Object} props - The component props
+ * @param {Function} props.onChange - Callback function triggered when the switch is toggled
+ * @param {React.ReactNode} props.children - Child elements to render (not used in this component)
+ * @param {boolean} [props.checked=false] - Whether the switch is in dark mode (checked) or light mode (unchecked)
+ * @param {number} [props.size=24] - The size of the switch icon in pixels
+ * @param {string} [props.moonColor="rgb(229 231 235)"] - The color of the moon icon in dark mode
+ * @param {string} [props.sunColor="#242526"] - The color of the sun icon in light mode
+ * @param {React.CSSProperties} [props.style] - Additional styles to apply to the svg element
+ * @param {Object} [props.rest] - Any other props to spread onto the svg element
+ * @returns {JSX.Element} A div containing an animated svg that represents the dark mode switch
+ */
 export const DarkModeSwitch: React.FC<Props> = ({
   onChange,
   children,

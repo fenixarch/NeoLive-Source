@@ -14,6 +14,12 @@ interface BodyProps {
   initialMessages: FullMessageType[];
 }
 
+/**
+ * Body component for rendering a conversation with real-time updates.
+ * @param {Object} props - The component props.
+ * @param {Array} [props.initialMessages=[]] - Initial messages to display.
+ * @returns {JSX.Element} A scrollable div containing MessageBox components for each message.
+ */
 const Body: React.FC<BodyProps> = ({ initialMessages = [] }) => {
   const bottomRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState(initialMessages);

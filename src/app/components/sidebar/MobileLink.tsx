@@ -9,6 +9,15 @@ interface MobileItemProps {
   onClick?: () => void;
 }
 
+/**
+ * Renders a mobile link component with optional icon and active state.
+ * @param {Object} props - The component props.
+ * @param {string} props.href - The URL the link points to.
+ * @param {React.ComponentType<React.SVGProps<SVGSVGElement>>} props.icon - The icon component to be rendered.
+ * @param {boolean} [props.active] - Whether the link is in an active state.
+ * @param {Function} [props.onClick] - Optional click handler function.
+ * @returns {React.ReactElement} A Link component with icon and styling based on active state.
+ */
 const MobileLink: React.FC<MobileItemProps> = ({ href, icon: Icon, active, onClick }) => {
   const handleClick = () => {
     if (onClick) {
