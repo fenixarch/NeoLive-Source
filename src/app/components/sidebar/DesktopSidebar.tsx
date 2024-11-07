@@ -13,6 +13,12 @@ interface DesktopSidebarProps {
   currentUser: User;
 }
 
+/**
+ * Renders the desktop sidebar component with navigation items and user profile.
+ * @param {Object} props - The component props.
+ * @param {Object} props.currentUser - The current user object.
+ * @returns {JSX.Element} A React component representing the desktop sidebar.
+ */
 const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
   const routes = useRoutes();
 
