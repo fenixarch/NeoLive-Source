@@ -19,6 +19,14 @@ interface GroupChatModalProps {
   users: User[];
 }
 
+/**
+ * React functional component for rendering a modal to create a group chat.
+ * @param {Object} props - The component props
+ * @param {boolean} props.isOpen - Determines if the modal is open
+ * @param {Function} props.onClose - Function to call when closing the modal
+ * @param {Array<Object>} [props.users=[]] - Array of user objects to select as group members
+ * @returns {React.ReactElement} A modal component with a form to create a group chat
+ */
 const GroupChatModal: React.FC<GroupChatModalProps> = ({ isOpen, onClose, users = [] }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
