@@ -10,6 +10,14 @@ interface SearchInputProps {
   setSearchBy: Dispatch<SetStateAction<string>>;
 }
 
+/**
+ * A React functional component for rendering a search input field with debounced search functionality.
+ * @param {Object} props - The component props
+ * @param {string} props.placeholder - The placeholder text for the input field
+ * @param {string} props.id - The ID attribute for the input field, also used for autocomplete
+ * @param {function} props.setSearchBy - A function to set the search criteria
+ * @returns {JSX.Element} A styled input element with search functionality
+ */
 const SearchInput: React.FC<SearchInputProps> = ({ placeholder, id, setSearchBy }) => {
   const debouncedSearch = useRef(
     debounce(async (criteria) => {
