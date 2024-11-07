@@ -5,6 +5,11 @@ import { useSession } from "next-auth/react";
 
 import { FullConversationType } from "../types";
 
+/**
+ * Hook to get the other user in a conversation
+ * @param {FullConversationType | { users: User[] }} conversation - The conversation object containing users
+ * @returns {User} The other user in the conversation
+ */
 const useOtherUser = (conversation: FullConversationType | { users: User[] }) => {
   const session = useSession();
 
