@@ -5,6 +5,10 @@ import { ClipLoader } from "react-spinners";
 
 import { Dialog, Transition } from "@headlessui/react";
 
+/**
+ * Renders a loading modal component with a fade-in/fade-out transition effect.
+ * @returns {JSX.Element} A React component that displays a loading spinner within a modal overlay.
+ */
 const LoadingModal = () => {
   return (
     <Transition.Root show as={Fragment}>
