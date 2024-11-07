@@ -11,6 +11,12 @@ interface UserListProps {
   items: User[];
 }
 
+/**
+ * Renders a list of users with search functionality
+ * @param {Object} props - The component props
+ * @param {User[]} props.items - An array of User objects to display
+ * @returns {JSX.Element} A sidebar component containing a search input and filtered list of UserBox components
+ */
 const UserList: React.FC<UserListProps> = ({ items }) => {
   const [searchBy, setSearchBy] = useState("");
 
