@@ -3,6 +3,13 @@ import { NextResponse } from "next/server";
 
 import getCurrentUser from "../../actions/getCurrentUser";
 
+/**
+ * Handles POST request to update user profile information
+ * @param {Request} request - The incoming HTTP request object
+ * @returns {Promise<NextResponse>} JSON response with updated user data or error message
+ * @throws {NextResponse} 401 if user is unauthorized
+ * @throws {NextResponse} 500 if there's a server error
+ */
 export async function POST(request: Request) {
   try {
     const currentUser = await getCurrentUser();
