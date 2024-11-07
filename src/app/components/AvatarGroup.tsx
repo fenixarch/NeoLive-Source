@@ -7,6 +7,12 @@ interface AvatarGroupProps {
   users?: User[];
 }
 
+/**
+ * Renders a group of user avatars, displaying up to 3 avatars in a stacked layout.
+ * @param {Object} props - The component props.
+ * @param {Array<Object>} [props.users=[]] - An array of user objects, each containing an id and image.
+ * @returns {React.ReactElement} A div containing stacked user avatars.
+ */
 const AvatarGroup: React.FC<AvatarGroupProps> = ({ users = [] }) => {
   const slicedUsers = users.slice(0, 3);
 
