@@ -11,6 +11,16 @@ interface SelectProps {
   disabled?: boolean;
 }
 
+/**
+ * A React functional component for rendering a customized select input.
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.label - The label text for the select input.
+ * @param {any} props.value - The current value of the select input.
+ * @param {Function} props.onChange - Callback function triggered when the selection changes.
+ * @param {Array} props.options - An array of options for the select input.
+ * @param {boolean} [props.disabled] - Optional. If true, the select input is disabled.
+ * @returns {JSX.Element} A div containing a label and a ReactSelect component.
+ */
 const Select: React.FC<SelectProps> = ({ label, value, onChange, options, disabled }) => {
   return (
     <div className="z-[100]">
