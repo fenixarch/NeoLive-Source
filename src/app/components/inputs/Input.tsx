@@ -13,6 +13,18 @@ interface InputProps {
   disabled?: boolean;
 }
 
+/**
+ * Input component for form fields with label and error handling
+ * @param {Object} props - The properties that define the Input component
+ * @param {string} props.label - The label text for the input field
+ * @param {string} props.id - The unique identifier for the input field
+ * @param {Function} props.register - The register function from react-hook-form
+ * @param {boolean} props.required - Indicates if the field is required
+ * @param {Object} props.errors - The errors object from react-hook-form
+ * @param {string} [props.type="text"] - The type of the input field (default: "text")
+ * @param {boolean} [props.disabled] - Indicates if the input field is disabled
+ * @returns {JSX.Element} A React component representing a form input field with label
+ */
 const Input: React.FC<InputProps> = ({
   label,
   id,
