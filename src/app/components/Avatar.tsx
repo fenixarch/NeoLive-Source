@@ -9,6 +9,12 @@ interface AvatarProps {
   user?: User;
 }
 
+/**
+ * Renders an Avatar component for a user with an active status indicator.
+ * @param {Object} props - The component props.
+ * @param {Object} props.user - The user object containing email and image properties.
+ * @returns {JSX.Element} A div containing the user's avatar image and an active status indicator if the user is active.
+ */
 const Avatar: React.FC<AvatarProps> = ({ user }) => {
   const { members } = useActiveList();
   const isActive = members.indexOf(user?.email!) !== -1;
