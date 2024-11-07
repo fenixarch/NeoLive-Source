@@ -17,6 +17,13 @@ interface ConfirmModalProps {
   onClose: () => void;
 }
 
+/**
+ * A modal component for confirming the deletion of a conversation
+ * @param {Object} props - The component props
+ * @param {boolean} props.isOpen - Determines if the modal is open
+ * @param {Function} props.onClose - Function to call when closing the modal
+ * @returns {JSX.Element} A modal dialog with confirmation message and action buttons
+ */
 const ConfirmModal: React.FC<ConfirmModalProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const { conversationId } = useConversation();
